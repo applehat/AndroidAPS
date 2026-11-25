@@ -117,6 +117,7 @@ class UserEntryPresentationHelperImpl(
         Sources.CalibrationDialog   -> IcCalibration
         Sources.CarbDialog          -> IcCarbs
         Sources.Carelevo            -> IcPluginCarelevo
+        Sources.Twiist              -> IcPluginVirtualPump
         Sources.Combo               -> IcPluginCombo
         Sources.ConcentrationDialog -> IcPluginInsulin
         Sources.ConfigBuilder       -> IcPluginConfigBuilder
@@ -278,6 +279,7 @@ class UserEntryPresentationHelperImpl(
         Sources.WizardDialog        -> ElementType.BOLUS_WIZARD.color()
         Sources.Xdrip               -> ElementType.CGM_XDRIP.color()
         Sources.Carelevo            -> ElementType.PUMP.color()
+        Sources.Twiist              -> ElementType.PUMP.color()
     }
 
     override fun listToPresentationString(list: List<ValueWithUnit>) =

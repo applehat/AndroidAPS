@@ -218,6 +218,7 @@ data class UserEntry(
         Database,           //for PersistenceLayer
 
         Carelevo,
+        Twiist,
         Unknown,            //if necessary
         ;
 

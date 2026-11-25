@@ -501,6 +501,29 @@ enum class PumpType(
         maxReservoirReading = 200,
         source = Source.EQuil,
         useHardwareLink = true,
+    ),
+
+    // Sequel Med Tech twiist - screenless durable pump, BLE-only control.
+    // SAFETY: every limit below is a CONSERVATIVE PLACEHOLDER, not a measured pump capability. Each value
+    // must be verified against the real pump (emulator + saline bench tests) before any insulin use.
+    SEQUEL_TWIIST(
+        description = "Sequel twiist",
+        manufacturer = ManufacturerType.Sequel,
+        model = "twiist",
+        bolusSize = 0.05,                        // TODO verify real bolus increment
+        specialBolusSize = null,
+        extendedBolusSettings = null,            // extended bolus not supported by this driver (yet)
+        pumpTempBasalType = PumpTempBasalType.Absolute,
+        tbrSettings = DoseSettings(0.05, 30, 12 * 60, 0.0, 5.0), // TODO verify; max deliberately low
+        specialBasalDurations = arrayOf(Capability.BasalRate_Duration30minAllowed),
+        baseBasalMinValue = 0.05,                // TODO verify
+        baseBasalMaxValue = 5.0,                 // TODO verify; deliberately low placeholder
+        baseBasalStep = 0.05,                    // TODO verify
+        baseBasalSpecialSteps = null,
+        pumpCapability = PumpCapability.TwiistCapabilities,
+        isPatchPump = false,                     // durable pump with replaceable cartridge (verify UX implications)
+        maxReservoirReading = 300,               // TODO verify cartridge volume reporting
+        source = Source.Twiist
     );
 
     fun manufacturer() = parent?.manufacturer ?: manufacturer ?: throw IllegalStateException()
@@ -540,7 +563,8 @@ enum class PumpType(
         VirtualPump,
         Unknown,
         EQuil,
-        Carelevo
+        Carelevo,
+        Twiist
     }
 
     companion object {
