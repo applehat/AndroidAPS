@@ -19,6 +19,10 @@ radio-less `TwiistNoRadioBleTransport` refuses every connection.
 - [ ] TBR / profile write verified by readback; `isThisProfileSet` compares pump-reported values
 - [ ] Alarms (occlusion, reservoir, battery, pump error) surfaced via AAPS notifications/alarm (screenless pump)
 - [ ] Pump behaviour when AAPS goes silent is understood; unreachable alert forced on
+- [ ] No residual on-pump autonomy fights AAPS: twiist can run its own closed loop with a directly paired Libre.
+      AAPS plan is "dumb pump" (no CGM paired to the pump). Verify, in captures + saline tests, that with no sensor
+      paired / on-pump loop off there are no autonomous basal changes, sensor-driven suspends, or conflicts with AAPS TBRs
+      (one-button bolus and other pump-local features also need accounting in PumpSync).
 - [ ] Pairing exclusivity vs the official twiist app; no two controllers
 - [ ] Time/timezone/DST handling; pump-unique ids for history idempotency
 - [ ] PumpType limits (SEQUEL_TWIIST) replaced with measured values
