@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="twiist">twiist</string>
+    <string name="twiist_pump_description">Sequel twiist pump driver (EXPERIMENTAL SKELETON - insulin delivery disabled)</string>
+    <string name="twiist_delivery_locked">twiist driver is a skeleton: insulin delivery is disabled</string>
+    <string name="twiist_status_title">twiist (experimental)</string>
+    <string name="twiist_status_locked">Insulin delivery is LOCKED. This driver does not yet speak the twiist protocol and will refuse every bolus, temp basal and profile change.</string>
+    <string name="twiist_transport_emulator">Transport: in-tree emulator</string>
+    <string name="twiist_transport_none">Transport: none (real BLE not implemented)</string>
+</resources>
