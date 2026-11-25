@@ -48,5 +48,7 @@ internal class PumpTypeExtensionTest {
         assertEquals(PumpType.MEDTRONIC_512_712, InterfaceIDs.PumpType.MEDTRONIC_512_517.fromDb())
         assertEquals(PumpType.EOFLOW_EOPATCH2, InterfaceIDs.PumpType.EOPATCH2.fromDb())
         assertEquals(PumpType.MEDTRUM_NANO, InterfaceIDs.PumpType.MEDTRUM.fromDb())
+        assertEquals(InterfaceIDs.PumpType.TWIIST, PumpType.SEQUEL_TWIIST.toDb())
+        assertEquals(PumpType.SEQUEL_TWIIST, InterfaceIDs.PumpType.TWIIST.fromDb())
     }
 }
