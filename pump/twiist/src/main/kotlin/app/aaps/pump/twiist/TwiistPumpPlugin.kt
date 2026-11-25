@@ -25,7 +25,7 @@ import app.aaps.core.interfaces.queue.CommandQueue
 import app.aaps.core.interfaces.resources.ResourceHelper
 import app.aaps.core.keys.interfaces.Preferences
 import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginVirtualPump
+import app.aaps.core.ui.compose.icons.IcPluginTwiist
 import app.aaps.pump.twiist.compose.TwiistComposeContent
 import app.aaps.pump.twiist.protocol.TwiistBleTransport
 import dev.zacsweers.metro.AppScope
@@ -63,7 +63,7 @@ class TwiistPumpPlugin(
 ) : PumpPluginBase(
     pluginDescription = PluginDescription()
         .mainType(PluginType.PUMP)
-        .icon(IcPluginVirtualPump)
+        .icon(IcPluginTwiist)
         .pluginName(TextRef.AndroidRes(R.string.twiist))
         .description(TextRef.AndroidRes(R.string.twiist_pump_description))
         .composeContent { _ ->

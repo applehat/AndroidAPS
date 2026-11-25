@@ -76,6 +76,7 @@ import app.aaps.core.ui.compose.icons.IcPluginRandomBg
 import app.aaps.core.ui.compose.icons.IcPluginSms
 import app.aaps.core.ui.compose.icons.IcPluginSyai
 import app.aaps.core.ui.compose.icons.IcPluginTomato
+import app.aaps.core.ui.compose.icons.IcPluginTwiist
 import app.aaps.core.ui.compose.icons.IcPluginVirtualPump
 import app.aaps.core.ui.compose.icons.IcProfile
 import app.aaps.core.ui.compose.icons.IcPumpBattery
@@ -117,7 +118,7 @@ class UserEntryPresentationHelperImpl(
         Sources.CalibrationDialog   -> IcCalibration
         Sources.CarbDialog          -> IcCarbs
         Sources.Carelevo            -> IcPluginCarelevo
-        Sources.Twiist              -> IcPluginVirtualPump
+        Sources.Twiist              -> IcPluginTwiist
         Sources.Combo               -> IcPluginCombo
         Sources.ConcentrationDialog -> IcPluginInsulin
         Sources.ConfigBuilder       -> IcPluginConfigBuilder
