@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flex">Flex</string>
+    <string name="flex_pump_description">Medtronic Flex / Instinct pump driver (EXPERIMENTAL SKELETON - insulin delivery disabled)</string>
+    <string name="flex_delivery_locked">Flex driver is a skeleton: insulin delivery is disabled</string>
+    <string name="flex_status_title">Flex (experimental)</string>
+    <string name="flex_status_locked">Insulin delivery is LOCKED. This driver has recovered IDD opcodes from the Instinct APK but does not yet speak the authenticated TLS-over-BLE channel, and will refuse every bolus, temp basal and profile change.</string>
+    <string name="flex_transport_emulator">Transport: in-tree emulator</string>
+    <string name="flex_transport_none">Transport: none (real BLE/TLS not implemented)</string>
+</resources>
