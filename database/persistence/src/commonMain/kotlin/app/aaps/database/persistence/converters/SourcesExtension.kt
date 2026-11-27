@@ -89,6 +89,7 @@ fun UserEntry.Sources.fromDb(): Sources =
         UserEntry.Sources.Scene               -> Sources.Scene
         UserEntry.Sources.Database            -> Sources.Database
         UserEntry.Sources.Carelevo            -> Sources.Carelevo
+        UserEntry.Sources.Flex                -> Sources.Flex
         UserEntry.Sources.Unknown             -> Sources.Unknown
     }
 
@@ -178,6 +179,7 @@ fun Sources.toDb(): UserEntry.Sources =
         Sources.Database            -> UserEntry.Sources.Database
         Sources.Insulin             -> UserEntry.Sources.Insulin
         Sources.Carelevo            -> UserEntry.Sources.Carelevo
+        Sources.Flex                -> UserEntry.Sources.Flex
         Sources.Unknown             -> UserEntry.Sources.Unknown
     }
 

@@ -67,6 +67,8 @@ files:
     translation: /pump/insight/src/main/res/values-%android_code%/strings.xml
   - source: /pump/medtronic/src/main/res/values/strings.xml
     translation: /pump/medtronic/src/main/res/values-%android_code%/strings.xml
+  - source: /pump/flex/src/main/res/values/strings.xml
+    translation: /pump/flex/src/main/res/values-%android_code%/strings.xml
   - source: /pump/medtrum/src/main/res/values/strings.xml
     translation: /pump/medtrum/src/main/res/values-%android_code%/strings.xml
   - source: /pump/omnipod/common/src/main/res/values/strings.xml

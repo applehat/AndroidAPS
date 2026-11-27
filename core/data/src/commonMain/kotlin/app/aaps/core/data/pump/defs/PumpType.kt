@@ -501,6 +501,29 @@ enum class PumpType(
         maxReservoirReading = 200,
         source = Source.EQuil,
         useHardwareLink = true,
+    ),
+
+    // Medtronic Flex / Instinct - BLE IDD pump (TLS-over-BLE). Distinct from classic RileyLink Medtronic.
+    // SAFETY: every limit below is a CONSERVATIVE PLACEHOLDER, not a measured pump capability. Each value
+    // must be verified against the real pump (emulator + saline bench tests) before any insulin use.
+    MEDTRONIC_FLEX(
+        description = "Medtronic Flex",
+        manufacturer = ManufacturerType.Medtronic,
+        model = "Flex",
+        bolusSize = 0.05,                        // TODO verify real bolus increment (Instinct packs U as u32)
+        specialBolusSize = null,
+        extendedBolusSettings = null,            // square/dual exist on wire; driver support not yet
+        pumpTempBasalType = PumpTempBasalType.Absolute,
+        tbrSettings = DoseSettings(0.05, 30, 12 * 60, 0.0, 5.0), // TODO verify; max deliberately low
+        specialBasalDurations = arrayOf(Capability.BasalRate_Duration30minAllowed),
+        baseBasalMinValue = 0.05,                // TODO verify
+        baseBasalMaxValue = 5.0,                 // TODO verify; deliberately low placeholder
+        baseBasalStep = 0.05,                    // TODO verify
+        baseBasalSpecialSteps = null,
+        pumpCapability = PumpCapability.FlexCapabilities,
+        isPatchPump = false,
+        maxReservoirReading = 300,               // TODO verify reservoir reporting
+        source = Source.Flex
     );
 
     fun manufacturer() = parent?.manufacturer ?: manufacturer ?: throw IllegalStateException()
@@ -540,7 +563,8 @@ enum class PumpType(
         VirtualPump,
         Unknown,
         EQuil,
-        Carelevo
+        Carelevo,
+        Flex
     }
 
     companion object {

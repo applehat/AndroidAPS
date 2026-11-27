@@ -22,6 +22,9 @@ enum class PumpCapability {
     MedtrumCapabilities(arrayOf(Capability.Bolus, Capability.TempBasal, Capability.BasalProfileSet, Capability.BasalRate30min, Capability.TDD)), // Technically the pump supports ExtendedBolus, but not implemented (yet)
     CarelevoCapabilities(arrayOf(Capability.Bolus, Capability.ExtendedBolus, Capability.TempBasal, Capability.BasalProfileSet, Capability.BasalRate30min)),
 
+    // Flex (Medtronic Instinct/Flex BLE): minimal set until live protocol on hardware is proven. No ExtendedBolus / TDD yet.
+    FlexCapabilities(arrayOf(Capability.Bolus, Capability.TempBasal, Capability.BasalProfileSet, Capability.BasalRate30min)),
+
     // Diaconn set without Refill and ReplaceBattery: the Equil wizard fills the reservoir and fits the charged battery
     EquilCapabilities(arrayOf(Capability.Bolus, Capability.ExtendedBolus, Capability.TempBasal, Capability.BasalProfileSet, Capability.TDD, Capability.ManualTDDLoad));
 
